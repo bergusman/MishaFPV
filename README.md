@@ -3,4 +3,4 @@ Demo app for drone FPV system can be used with things like [Google Cardboard](ht
 
 Work with this FPV streamer:
 
-![FPV Streamer](https://farm6.staticflickr.com/5744/21493487305_bc5ee21b03_z_d.jpg)
+![FPV Streamer](https://farm6.staticflickr.com/5744/21493487305_bc5ee21b03_m_d.jpg)
