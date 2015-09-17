@@ -9,23 +9,30 @@
 /* Begin PBXBuildFile section */
 		AD3274F41BAB31080097EF42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3274F31BAB31080097EF42 /* main.m */; };
 		AD3274F71BAB31080097EF42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3274F61BAB31080097EF42 /* AppDelegate.m */; };
-		AD3274FA1BAB31090097EF42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3274F91BAB31080097EF42 /* ViewController.m */; };
-		AD3274FD1BAB31090097EF42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3274FB1BAB31090097EF42 /* Main.storyboard */; };
 		AD3274FF1BAB31090097EF42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3274FE1BAB31090097EF42 /* Assets.xcassets */; };
 		AD3275021BAB31090097EF42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3275001BAB31090097EF42 /* LaunchScreen.storyboard */; };
+		AD32750C1BAB32690097EF42 /* FPVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32750A1BAB32690097EF42 /* FPVViewController.m */; settings = {ASSET_TAGS = (); }; };
+		AD32750D1BAB32690097EF42 /* FPVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32750B1BAB32690097EF42 /* FPVViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		AD3275141BAB36FB0097EF42 /* ReplicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3275131BAB36FB0097EF42 /* ReplicatorView.m */; settings = {ASSET_TAGS = (); }; };
+		DBF5C42C5EE2560AE76E9796 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C505AF1ED10B06B239956C72 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09182ABEE0592CE93DD7ADBE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1F4ACB800BD16BA1D4E00DC2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AD3274EF1BAB31080097EF42 /* MishaFPV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MishaFPV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3274F31BAB31080097EF42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD3274F51BAB31080097EF42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD3274F61BAB31080097EF42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD3274F81BAB31080097EF42 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AD3274F91BAB31080097EF42 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AD3274FC1BAB31090097EF42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD3274FE1BAB31090097EF42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3275011BAB31090097EF42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD3275031BAB31090097EF42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3275091BAB32690097EF42 /* FPVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPVViewController.h; sourceTree = "<group>"; };
+		AD32750A1BAB32690097EF42 /* FPVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPVViewController.m; sourceTree = "<group>"; };
+		AD32750B1BAB32690097EF42 /* FPVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPVViewController.xib; sourceTree = "<group>"; };
+		AD3275121BAB36FB0097EF42 /* ReplicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorView.h; sourceTree = "<group>"; };
+		AD3275131BAB36FB0097EF42 /* ReplicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorView.m; sourceTree = "<group>"; };
+		C505AF1ED10B06B239956C72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF5C42C5EE2560AE76E9796 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29B75BFE5A43D066EFCFD8EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09182ABEE0592CE93DD7ADBE /* Pods.debug.xcconfig */,
+				1F4ACB800BD16BA1D4E00DC2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD3274E61BAB31080097EF42 = {
 			isa = PBXGroup;
 			children = (
 				AD3274F11BAB31080097EF42 /* MishaFPV */,
 				AD3274F01BAB31080097EF42 /* Products */,
+				29B75BFE5A43D066EFCFD8EA /* Pods */,
+				D3477CA3917AF6C9453C128F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +77,8 @@
 		AD3274F11BAB31080097EF42 /* MishaFPV */ = {
 			isa = PBXGroup;
 			children = (
-				AD3274F51BAB31080097EF42 /* AppDelegate.h */,
-				AD3274F61BAB31080097EF42 /* AppDelegate.m */,
-				AD3274F81BAB31080097EF42 /* ViewController.h */,
-				AD3274F91BAB31080097EF42 /* ViewController.m */,
-				AD3274FB1BAB31090097EF42 /* Main.storyboard */,
-				AD3274FE1BAB31090097EF42 /* Assets.xcassets */,
-				AD3275001BAB31090097EF42 /* LaunchScreen.storyboard */,
-				AD3275031BAB31090097EF42 /* Info.plist */,
+				AD32750E1BAB36C70097EF42 /* Sources */,
+				AD32750F1BAB36CC0097EF42 /* Resources */,
 				AD3274F21BAB31080097EF42 /* Supporting Files */,
 			);
 			path = MishaFPV;
@@ -79,6 +92,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD32750E1BAB36C70097EF42 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AD3275111BAB36E20097EF42 /* Common */,
+				AD3275101BAB36D80097EF42 /* FPV Controller */,
+				AD3274F51BAB31080097EF42 /* AppDelegate.h */,
+				AD3274F61BAB31080097EF42 /* AppDelegate.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		AD32750F1BAB36CC0097EF42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD3274FE1BAB31090097EF42 /* Assets.xcassets */,
+				AD3275001BAB31090097EF42 /* LaunchScreen.storyboard */,
+				AD3275031BAB31090097EF42 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AD3275101BAB36D80097EF42 /* FPV Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD3275091BAB32690097EF42 /* FPVViewController.h */,
+				AD32750A1BAB32690097EF42 /* FPVViewController.m */,
+				AD32750B1BAB32690097EF42 /* FPVViewController.xib */,
+			);
+			name = "FPV Controller";
+			sourceTree = "<group>";
+		};
+		AD3275111BAB36E20097EF42 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD3275121BAB36FB0097EF42 /* ReplicatorView.h */,
+				AD3275131BAB36FB0097EF42 /* ReplicatorView.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		D3477CA3917AF6C9453C128F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C505AF1ED10B06B239956C72 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD3275061BAB31090097EF42 /* Build configuration list for PBXNativeTarget "MishaFPV" */;
 			buildPhases = (
+				34AA40AAA8BA8B2068065D5B /* Check Pods Manifest.lock */,
 				AD3274EB1BAB31080097EF42 /* Sources */,
 				AD3274EC1BAB31080097EF42 /* Frameworks */,
 				AD3274ED1BAB31080097EF42 /* Resources */,
+				FA63D5DCBACC4A345E3AE77F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,36 +199,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD32750D1BAB32690097EF42 /* FPVViewController.xib in Resources */,
 				AD3275021BAB31090097EF42 /* LaunchScreen.storyboard in Resources */,
 				AD3274FF1BAB31090097EF42 /* Assets.xcassets in Resources */,
-				AD3274FD1BAB31090097EF42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34AA40AAA8BA8B2068065D5B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA63D5DCBACC4A345E3AE77F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD3274EB1BAB31080097EF42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3274FA1BAB31090097EF42 /* ViewController.m in Sources */,
+				AD32750C1BAB32690097EF42 /* FPVViewController.m in Sources */,
 				AD3274F71BAB31080097EF42 /* AppDelegate.m in Sources */,
 				AD3274F41BAB31080097EF42 /* main.m in Sources */,
+				AD3275141BAB36FB0097EF42 /* ReplicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD3274FB1BAB31090097EF42 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD3274FC1BAB31090097EF42 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD3275001BAB31090097EF42 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -259,6 +348,7 @@
 		};
 		AD3275071BAB31090097EF42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09182ABEE0592CE93DD7ADBE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MishaFPV/Info.plist;
@@ -270,6 +360,7 @@
 		};
 		AD3275081BAB31090097EF42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4ACB800BD16BA1D4E00DC2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MishaFPV/Info.plist;
@@ -298,6 +389,7 @@
 				AD3275081BAB31090097EF42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

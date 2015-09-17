@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FPVViewController.h
 //  MishaFPV
 //
 //  Created by Vitaly Berg on 17/09/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FPVViewController : UIViewController
 
 @end
-
