@@ -19,6 +19,11 @@
 @property (weak, nonatomic) IBOutlet ReplicatorView *replicatorView;
 @property (weak, nonatomic) IBOutlet FOGMJPEGImageView *previewImageView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *pan;
+
 @property (strong, nonatomic) NSDate *lastFrameDate;
 @property (strong, nonatomic) NSTimer *timer;
 
@@ -48,6 +53,27 @@
 }
 
 - (void)FOGMJPEGImageView:(FOGMJPEGImageView *)mjpegImageView loadingImgaeDidFailWithError:(NSError *)error {
+}
+
+#pragma mark - Actions
+
+- (IBAction)pan:(UIPanGestureRecognizer *)pan {
+    CGPoint translation = [pan translationInView:self.view];
+    CGFloat y = translation.y / 2;
+    [pan setTranslation:CGPointZero inView:self.view];
+    
+    CGFloat h = self.topConstraint.constant;
+    h += y;
+    h = ceil(h);
+    
+    CGFloat max = self.view.bounds.size.height / 3;
+    max = ceil(max);
+    CGFloat min = -max;
+    
+    h = MIN(MAX(h, min), max);
+    
+    self.topConstraint.constant = h;
+    self.bottomConstraint.constant = h;
 }
 
 #pragma mark - UIViewController

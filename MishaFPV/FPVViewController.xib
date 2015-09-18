@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPVViewController">
             <connections>
+                <outlet property="bottomConstraint" destination="9VR-lj-4Rl" id="UHZ-B8-lMT"/>
+                <outlet property="pan" destination="5TR-bz-qoI" id="V6M-RJ-yN8"/>
                 <outlet property="previewImageView" destination="bSm-bH-nhM" id="bYy-D2-qic"/>
                 <outlet property="replicatorView" destination="nwN-pN-jWj" id="19n-XP-RQ2"/>
+                <outlet property="topConstraint" destination="AQG-Qa-3HP" id="FJs-93-Hsi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,16 +48,35 @@
                         <constraint firstAttribute="bottom" secondItem="nwN-pN-jWj" secondAttribute="bottom" id="j3S-Ls-mZ9"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVA-ur-YZg">
+                    <rect key="frame" x="518" y="0.0" width="50" height="320"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1VS-aR-fmm"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="5TR-bz-qoI" appends="YES" id="i2U-7N-qbd"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="vgJ-PL-Bvw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="20B-q9-f6e"/>
                 <constraint firstAttribute="bottom" secondItem="vgJ-PL-Bvw" secondAttribute="bottom" id="Qeg-lN-SSt"/>
+                <constraint firstItem="VVA-ur-YZg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WTL-eI-MMR"/>
                 <constraint firstItem="vgJ-PL-Bvw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d9U-sR-D5E"/>
+                <constraint firstAttribute="bottom" secondItem="VVA-ur-YZg" secondAttribute="bottom" id="h7b-2Y-Eeq"/>
+                <constraint firstAttribute="trailing" secondItem="VVA-ur-YZg" secondAttribute="trailing" id="tgu-Va-P5f"/>
                 <constraint firstAttribute="trailing" secondItem="vgJ-PL-Bvw" secondAttribute="trailing" id="ucz-S7-NuH"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <point key="canvasLocation" x="262" y="447"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="5TR-bz-qoI">
+            <connections>
+                <action selector="pan:" destination="-1" id="m58-oC-Amq"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>
