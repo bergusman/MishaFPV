@@ -12,9 +12,6 @@
 
 #import <FOGMJPEGImageView/FOGMJPEGImageView.h>
 
-#define LAG_TIME 2
-#define FAIL_TIME 2
-
 #define FPV_URL @"http://192.168.10.123:7060"
 
 @interface FPVViewController () <FOGMJPEGImageViewDelegate>
@@ -22,35 +19,35 @@
 @property (weak, nonatomic) IBOutlet ReplicatorView *replicatorView;
 @property (weak, nonatomic) IBOutlet FOGMJPEGImageView *previewImageView;
 
-@property (strong, nonatomic) NSTimer *lagTimer;
-@property (strong, nonatomic) NSTimer *failTimer;
+@property (strong, nonatomic) NSDate *lastFrameDate;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
 @implementation FPVViewController
 
-#pragma mark -
+#pragma mark - Content
+
+- (void)scheduleTimer {
+    [self.timer invalidate];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerRaised:) userInfo:nil repeats:YES];
+}
+
+- (void)timerRaised:(NSTimer *)timer {
+    NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:self.lastFrameDate];
+    if (elapsed > 3) {
+        [self.previewImageView stop];
+        [self.previewImageView startWithURL:[NSURL URLWithString:FPV_URL]];
+    }
+}
+
+#pragma mark - FOGMJPEGImageViewDelegate
 
 - (void)FOGMJPEGImageViewDidReceiveImage:(FOGMJPEGImageView *)mjpegImageView {
-    [self.lagTimer invalidate];
-    self.lagTimer = [NSTimer scheduledTimerWithTimeInterval:LAG_TIME target:self selector:@selector(lagRaised:) userInfo:nil repeats:NO];
+    self.lastFrameDate = [NSDate date];
 }
 
 - (void)FOGMJPEGImageView:(FOGMJPEGImageView *)mjpegImageView loadingImgaeDidFailWithError:(NSError *)error {
-    [self.lagTimer invalidate];
-    self.lagTimer = nil;
-    [self.failTimer invalidate];
-    self.failTimer = [NSTimer scheduledTimerWithTimeInterval:FAIL_TIME target:self selector:@selector(failRaised:) userInfo:nil repeats:NO];
-}
-
-#pragma mark - Content
-
-- (void)lagRaised:(NSTimer *)timer {
-    [self.previewImageView startWithURL:[NSURL URLWithString:FPV_URL]];
-}
-
-- (void)failRaised:(NSTimer *)timer {
-    [self.previewImageView startWithURL:[NSURL URLWithString:FPV_URL]];
 }
 
 #pragma mark - UIViewController
@@ -59,7 +56,9 @@
     [super viewDidLoad];
     self.replicatorView.replicatorLayer.instanceCount = 2;
     self.previewImageView.delegate = self;
+    self.lastFrameDate = [NSDate date];
     [self.previewImageView startWithURL:[NSURL URLWithString:FPV_URL]];
+    [self scheduleTimer];
 }
 
 - (void)viewDidLayoutSubviews {
