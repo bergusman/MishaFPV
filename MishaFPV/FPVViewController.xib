@@ -23,14 +23,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-pN-jWj" customClass="ReplicatorView">
                             <rect key="frame" x="0.0" y="0.0" width="284" height="320"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bSm-bH-nhM" customClass="FOGMJPEGImageView">
-                                    <rect key="frame" x="0.0" y="0.0" width="284" height="320"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bSm-bH-nhM" customClass="FOGMJPEGImageView">
+                                    <rect key="frame" x="0.0" y="30" width="284" height="260"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="bSm-bH-nhM" secondAttribute="bottom" id="9VR-lj-4Rl"/>
-                                <constraint firstItem="bSm-bH-nhM" firstAttribute="top" secondItem="nwN-pN-jWj" secondAttribute="top" id="AQG-Qa-3HP"/>
+                                <constraint firstAttribute="bottom" secondItem="bSm-bH-nhM" secondAttribute="bottom" constant="30" id="9VR-lj-4Rl"/>
+                                <constraint firstItem="bSm-bH-nhM" firstAttribute="top" secondItem="nwN-pN-jWj" secondAttribute="top" constant="30" id="AQG-Qa-3HP"/>
                                 <constraint firstAttribute="trailing" secondItem="bSm-bH-nhM" secondAttribute="trailing" id="gDj-5Y-yw2"/>
                                 <constraint firstItem="bSm-bH-nhM" firstAttribute="leading" secondItem="nwN-pN-jWj" secondAttribute="leading" id="h9l-VA-d68"/>
                             </constraints>
